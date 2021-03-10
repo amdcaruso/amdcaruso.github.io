@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <meta content="utf-8" http-equiv="encoding" />
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="/js/styles.js"></script>
+      </head>
+
+      <body>
+        <header>
+          <h1>T&Cs Formatter</h1>
+          <h6>Paste in the T&Cs. P tags will wrap each line. </h2>
+        </header>
+
+        <main>
+          <div>
+            <textarea id="initialTextArea" rows="20" cols="45" placeholder="Add your terms copy here" oninput="transformTerms()"></textarea>
+          </div>
+          <div class="resultContainer">
+            <button id="copyButton" onclick="copyToClipboard()"> Copy</button>
+            <textarea id="resultTextArea" rows="20" cols="45" placeholder="The results will appear here"></textarea>
+
+          </div>
+        </main>
+      </body>
+</html>
