@@ -5,7 +5,9 @@ Terms at times can be given in different formats: e.g 1. 2) as we are not aware 
 This tool works by adding the text to the left textarea and the results will be seen real time on the textarea to your right.
 This was built with HTML, CSS and JavaScript.
 
-Demo (here)(https://termsformatter.netlify.app/).
+## Demo
+
+Demo [here](https://termsformatter.netlify.app/).
 
 Icon credit:
 
