@@ -1,0 +1,95 @@
+/* INFORMATION
+	- Document: T&Cs formatter
+	- Version:  1.0.0
+	- Author:   A. CAVALLARO
+*/
+
+/* COLOR
+  --main-bg-color:    #eee;
+  --main-text-color:  black;
+*/
+
+/* FONTS
+	- Default Text:     Roboto
+*/
+
+/* ===============
+    Global Styles
+   =============== */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url(https://themes.googleusercontent.com/static/fonts/roboto/v9/Pru33qjShpZSmG3z6VYwnT8E0i7KZn-EPnyo3HZu7kw.woff)
+            format('woff');
+}
+
+:root {
+    /* CSS Custom Variables */
+    --main-bg-color: #eee;
+    --main-text-color: black;
+    --box-shadow-color: #333333;
+}
+
+body {
+    text-align: center;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    margin: 0 auto;
+    font-size: 1em;
+    font-family: Roboto;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+textarea {
+    min-width: 18vw;
+    max-width: 80vw;
+    min-height: 200px;
+    max-height: 50vh;
+    padding: 4em;
+    box-shadow: 8px 8px 8px var(--box-shadow-color);
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+#copyButton {
+    position: absolute;
+    cursor: pointer;
+    height: 3.5em;
+    width: 3.5em;
+}
+@media only screen and (min-width: 684px) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #copyButton {
+        height: 3em;
+        width: 3em;
+    }
+    textarea {
+        height: 90vh;
+        width: 25vh;
+    }
+}
+
+@media only screen and (min-width: 972px) {
+    body {
+        font-size: 2em;
+    }
+    textarea {
+        width: 40vh;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    textarea {
+        font-size: 0.9em;
+    }
+}
