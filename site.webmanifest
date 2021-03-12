@@ -1,11 +1,11 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Terms Formatter",
+    "short_name": "T&Cs Formatter",
     "icons": [
-        { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-        { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+        { "src": "/assets/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "/assets/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "black",
+    "background_color": "#eee",
     "display": "standalone"
 }
