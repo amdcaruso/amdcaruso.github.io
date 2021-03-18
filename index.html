@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-        <meta content="utf-8" http-equiv="encoding" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="stylesheet" href="styles/styles.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="styles/styles.css" />
-        <link rel="stylesheet" href="styles/styles.css" />
+        <script
+            src="https://cdn.tiny.cloud/1/h3epw3xda49zhkpaj9w18j79sy5jbg9muuhsp1uf30wtjyd7/tinymce/5/tinymce.min.js"
+            referrerpolicy="origin"
+        ></script>
         <script type="text/javascript" src="script/script.js"></script>
+        <title>Terms Formatter</title>
     </head>
-
     <body>
         <header>
             <h1>T&Cs Formatter</h1>
@@ -19,18 +22,15 @@
 
         <main>
             <div class="textAreaContainer">
-                <textarea
-                    id="initialTextArea"
-                    placeholder="Add your terms copy here"
-                    oninput="transformTerms()"
-                ></textarea>
+                <form method="post">
+                    <textarea id="initialTextArea" name="initialTextArea" oninput="transformTerms()"></textarea>
+                </form>
             </div>
             <div class="textAreaContainer">
-                <button aria-label="copy" id="copyButton" onclick="copyToClipboard()">
-                    <img alt="copy to clipboard" src="assets/icon.png" />
-                </button>
+                <button id="copyButton" onclick="copyToClipboard()"><img alt="copy" src="assets/icon.png" /></button>
                 <textarea id="resultTextArea" placeholder="The results will appear here"></textarea>
             </div>
         </main>
+        <footer></footer>
     </body>
 </html>

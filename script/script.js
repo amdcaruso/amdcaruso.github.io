@@ -1,12 +1,18 @@
+tinymce.init({
+    selector: '#initialTextArea',
+    setup: function (editor) {
+        editor.on('input', function (e) {
+            transformTerms();
+        });
+        editor.on('ExecCommand', function (e) {
+            console.log('The ' + e.command + ' command was fired.');
+            transformTerms();
+        });
+    },
+});
+
 function transformTerms() {
-    const str = document.getElementById('initialTextArea').value;
-    /* Regular expression */
-    const re = /(.*\S)/gi;
-    /* The p tags to be added around each line*/
-    const subst = '<p>$1</p>';
-    /* Adds regex to the variable that contains the initial text area
-    and saves it on the variable result*/
-    const result = str.replace(re, subst);
+    result = tinyMCE.get('initialTextArea').getContent({ format: 'html' });
     /* Adds the formatted text to the Result Text Area */
     document.getElementById('resultTextArea').innerHTML = result;
 }
